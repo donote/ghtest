@@ -45,6 +45,11 @@ $git config --global user.name "Harry.Liu"
 $git config --global user.email "xxx@163.com”
 ```
 
+- 修改已经已提交的commit的Author，只能修改上一次的
+```
+git commit --amend --author='Harry.Liu <donote@163.com>'
+```
+
 #### 常用git命令
 
 ```
