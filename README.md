@@ -34,6 +34,52 @@ ssh -T git@github.com
 
 ```
 # git 命令
+# 查看当前所属分支
+git branch
+
+# 切换到相应分支liuhui，若没有该分支 则会本地建立
+git branch test-br
+
+# 切换到相应的分支test-br
+git checkout test-br
+
+# 将本次修改加入待commit
+git add filenames
+
+# 撤回上次的修改的
+git reset filenames
+
+# 将加入buffer中的文件去掉
+git reset HEAD filename
+
+# 增加message信息 commit本次修改，在此之前建议先做git pull
+git commit -m "messages ..."
+
+# push到分支，初次会提示增加到origin，之后直接push
+# git push --set-upstream origin test-br
+git push
+
+# 基本原理：git branch操作只是分支指针的修改，在commit阶段才做内容copy
+# pull阶段：从remote branch->origin branch，然后会同步到本地branch
+# push阶段：从本地branch同步到remote branch
+# fetch阶段：从remote branch->origin branch
+
+# 下载分支代码代码：先clone主干代码，然后checkout到分支，再进行pull
+git clone master_code_git
+git checkout test-br
+git pull
+
+# 删除本地分支
+git branch -d test-br
+
+# 暂存之前修改的数据
+git stash 
+
+# pull之后再把修改的数据更新回来
+git stash pop
+
+# 把主干代码同步到分支，在分支下操作：
+git pull origin master
 
 ```
 
