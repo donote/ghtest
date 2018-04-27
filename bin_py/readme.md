@@ -1,9 +1,12 @@
-##Python使用记录
+## Python使用记录
+
 自安装python软件包在该目录下：
 ```bash
 python2.7/lib/python2.7/site-packages/
 ```
+
 ***
+
 ``` python code
 # 对字典元素进行排序
 dic = {'a':31, 'bc':5, 'c':3, 'asd':4, 'aa':74, 'd':0}
@@ -12,8 +15,9 @@ print dict
 ```
 
 ***
-####常用工具
-#####> tensorflow
+
+#### 常用工具
+##### > tensorflow
 ###### 基本元素
 
 ```python
@@ -38,6 +42,7 @@ tf.__path__  # 安装路径
 ```
 
 ***遇到的问题***
+
 1. 引入seq2seq网络，不同版本的不同方法
 
 ```
@@ -50,7 +55,8 @@ tensorflow.unstack()
 ```
 
 
-#####> numpy
+##### > numpy
+
 >以下仅为在工作中常用到的一些函数和用法
 
 ```python
@@ -80,14 +86,16 @@ nv = numpy.array(vv, dtype=numpy.float64)
 
 
 ***
-####python内建类或函数
-#####> re
+#### python内建类或函数
+##### > re
+
 ``` python
 # 对cont按""中的各个字符进行分割
 re.split(",|.|!|?", cont)
 ```
 
-#####> argparse
+##### > argparse
+
 ```python
 def get_args():
     """
@@ -101,7 +109,8 @@ def get_args():
     return args
 ```
 
-#####> enumerate
+##### > enumerate
+
 ```python
 # 第二个参数控制索引的下标起始地址
 list1 = ["这", "是", "一个", "测试"]
@@ -114,14 +123,16 @@ for index, item in enumerate(list1, 1):
 4 测试
 ```
 
-#####> map
+##### > map
+
 ```python
 # vocab字典，通过map得到字段的value值
 map(vocab.get, ['y', 't'])
 # 第一个参数为函数，第二个参数为依次传入第一个参数的数值，结果有map返回，为list类型
 ```
 
-#####> collections
+##### > collections
+
 以下几个函数常被用到：
 ```python
 deque # 双向队列，可以从头尾插入弹出元素
@@ -130,7 +141,8 @@ OrderedDict # 对字典自动按key进行排序
 defaultdict # 可以设置默认value值的字典
 ```
 
-#####> pickle
+##### > pickle
+
 ```python
 dump # 可以将对象序列化写入
 loads # 序列化加载
@@ -143,7 +155,7 @@ with open(vocab_file, 'wb') as f:
     pickle.dump(vocab, f)
 ```
 
-#####> codecs
+##### > codecs
 
 读写文件时指定编码格式
 ```
@@ -153,7 +165,8 @@ with codecs.open(args.input_file, 'r', encoding='utf-8') as f:
 
 ***
 
-####>logging
+#### >logging
+
 ``` 
 import logging
 logging.debug('This is debug message')
