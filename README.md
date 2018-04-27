@@ -50,6 +50,8 @@ $git config --global user.email "xxx@163.com”
 git commit --amend --author='Harry.Liu <donote@163.com>'
 ```
 
+- [.gitignore文件的使用](https://www.cnblogs.com/kevingrace/p/5690241.html)
+
 #### 常用git命令
 
 ```
