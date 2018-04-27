@@ -30,17 +30,20 @@ ssh -T git@github.com
 - 到shell终端下，执行```git clone https://github.com/donote/ghtest.git```  
 - 修改README文件，或添加其他文件/文件夹，加入本地仓库，提交到远程仓库
 
-##### 3. 多账户登录设置
-- 在```~/.ssh/```下面建立```config```文件
-- 记录
-
+##### 3. 修改提交用户名和email
+- 修改项目下面的.git/config
 ```
-Host 
-Hostname 
-User 
-IdentityFile
+[user]
+name = Harry.Liu
+email = xxx@163.com
 ```
 
+- 如果使用下面命令，则修改的是全局的，作用在```~/.gitconfig```中
+
+```
+$git config --global user.name "Harry.Liu"
+$git config --global user.email "xxx@163.com”
+```
 
 #### 常用git命令
 
