@@ -30,6 +30,18 @@ ssh -T git@github.com
 - 到shell终端下，执行```git clone https://github.com/donote/ghtest.git```  
 - 修改README文件，或添加其他文件/文件夹，加入本地仓库，提交到远程仓库
 
+##### 3. 多账户登录设置
+- 在```~/.ssh/```下面建立```config```文件
+- 记录
+
+```
+Host 
+Hostname 
+User 
+IdentityFile
+```
+
+
 #### 常用git命令
 
 ```
